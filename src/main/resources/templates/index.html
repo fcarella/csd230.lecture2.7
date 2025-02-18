@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+    <a href="/books">Books</a>
+    <a href="/cart">Cart</a>
+</nav>
+This application supports <span style="font-size: 1.2em;font-weight: bolder" th:text="${title}" />
+</body>
+</html>
