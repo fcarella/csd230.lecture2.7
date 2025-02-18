@@ -2,6 +2,7 @@ package csd230.lecture27.controllers;
 
 import csd230.lecture27.entities.Book;
 import csd230.lecture27.respositories.BookRepository;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,11 @@ public class BookController {
     public @ResponseBody List<Book> getBooksInJSON() {
         return bookRepository.findAll();
 
+    }
+    @RequestMapping(value = "booksXml", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
+    public @ResponseBody List<Book> getBooksInXml() {
+        List<Book> books = bookRepository.findAll();
+        return books;
     }
 
 
